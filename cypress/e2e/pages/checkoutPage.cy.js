@@ -1,47 +1,46 @@
 class CheckoutPage {
     locators={
         path: 'a[href="/checkout"]',
+        checkoutBtn: '.check_out',
         comment: 'textarea[name="message"]',
-        orderBtn: 'input[href="/payment"]',
-        name: 'input[data-qa="name_on_card"]',
+        orderBtn: 'a[href="/payment"]',
+        name: 'input[data-qa="name-on-card"]',
         number: 'input[data-qa="card-number"]',
         cvc: 'input[data-qa="cvc"]',
-        month: 'input[data-qa="expiry_month"]',
-        year: 'input[data-qa="expiry_year"]',
-        confirOrderBtn: 'button:contains("Pay and Confirm Order")',
-        successOrder: '.order-confirmation',
-        message: 'Your order has been placed successfully',
-        OrderPlaced: 'Order Placed!',
+        month: 'input[data-qa="expiry-month"]',
+        year: 'input[data-qa="expiry-year"]',
+        confirmOrderBtn: 'button:contains("Pay and Confirm Order")',
+        successOrder: 'h2[data-qa="order-placed"]',
+        successOrder2: '.order-confirmation'
     }
 
-    locator = this.locators
-
     proceedToCheckout() {
-      cy.get(locator.path).click();
+        cy.get(this.locators.checkoutBtn).click();
     }
 
     addComment(comment) {
-      cy.get(locator.comment).type(comment);
+        cy.get(this.locators.comment).type(comment);
     }
 
     placeOrder() {
-      cy.get(locator.orderBtn).click();
+        cy.get(this.locators.orderBtn).click();
     }
 
     fillCardDetails(name, number, cvc, month, year) {
-      cy.get(locator.name).type(name);
-      cy.get(locator.number).type(number);
-      cy.get(locator.cvc).type(cvc);
-      cy.get(locator.month).type(month);
-      cy.get(locator.year).type(year);
+        cy.get(this.locators.name).type(name);
+        cy.get(this.locators.number).type(number);
+        cy.get(this.locators.cvc).type(cvc);
+        cy.get(this.locators.month).type(month);
+        cy.get(this.locators.year).type(year);
     }
 
     confirmOrder() {
-      cy.get(locator.confirOrderBtn).click();
+        cy.get(this.locators.confirmOrderBtn).click();
     }
 
     verifyOrderSuccess() {
-      cy.get(locator.successOrder).should('contain', locator.message);
+        cy.get(this.locators.successOrder).should('contain', 'Order Placed!');
+        cy.contains('Congratulations! Your order has been confirmed!');
     }
 }
 
