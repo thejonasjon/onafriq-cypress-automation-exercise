@@ -8,5 +8,11 @@
   "cardNumber": "41000000000",
   "cardCVC": "123",
   "cardMonth": "01",
-  "cardYear": "1900"
+  "cardYear": "1900",
+  "addedToCartH1Text": "Your product has been added to cart.",
+  "paymentH2Text": "Payment",
+  "shoppingCartPageText": "Shopping Cart",
+  "reviewOrderSectionText": "Review Your Order",
+  "loginH1Text": "Login to your accoun",
+  "featureItemH2Text": "Features Items"
 }

@@ -11,7 +11,10 @@ class CheckoutPage {
         year: 'input[data-qa="expiry-year"]',
         confirmOrderBtn: 'button:contains("Pay and Confirm Order")',
         successOrder: 'h2[data-qa="order-placed"]',
-        successOrder2: '.order-confirmation'
+        successOrder2: '.order-confirmation',
+        ConfirmH2: '.Address Details',
+        secondH2: '.Review Your Order',
+        paymentH2: '.Payment',
     }
 
     proceedToCheckout() {
@@ -19,7 +22,7 @@ class CheckoutPage {
     }
 
     addComment(comment) {
-        cy.get(this.locators.comment).type(comment);
+        cy.setTextArea(this.locators.comment, comment)
     }
 
     placeOrder() {
