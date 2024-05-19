@@ -8,7 +8,6 @@ class LoginPage {
         submitBtn: 'button[data-qa="login-button"]',
     };
 
-
     visit() {
       cy.visit('https://www.automationexercise.com/');
     }
