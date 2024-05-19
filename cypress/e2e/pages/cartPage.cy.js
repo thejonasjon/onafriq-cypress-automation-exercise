@@ -3,10 +3,10 @@ class CartPage {
         path: 'a[href="/view_cart"]',
     }
 
-    locator = this.locators
-
     viewCart() {
-      cy.get(locator.path).click();
+        cy.get('.modal-content').within(() => {
+            cy.get(this.locators.path).should('contain', 'View Cart').click()
+        })
     }
 }
 

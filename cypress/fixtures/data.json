@@ -1,4 +1,12 @@
 {
   "email": "qat@mailinator.com",
-  "password": "123456"
+  "password": "123456",
+  "item1": "Fancy Green Top",
+  "item2": "Summer White Top",
+  "comment": "I would love to receive this order withing 3 days. Here my contacts",
+  "cardName": "Test Card",
+  "cardNumber": "41000000000",
+  "cardCVC": "123",
+  "cardMonth": "01",
+  "cardYear": "1900"
 }
