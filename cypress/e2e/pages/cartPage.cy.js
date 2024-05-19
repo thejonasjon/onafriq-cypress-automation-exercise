@@ -1,6 +1,13 @@
 class CartPage {
     locators={
         path: 'a[href="/view_cart"]',
+        cartPageItems: '#cart_items',
+        cartInfo: '#cart_info',
+        cartInfoTable: '#cart_info_table',
+        tableTr: 'tr > #product-2',
+        cartQuantity: '.cart_quantity',
+        addedToCartModal: '.cartModal',
+
     }
 
     viewCart() {

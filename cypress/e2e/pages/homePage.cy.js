@@ -3,13 +3,14 @@ import { getFeaturedItems } from "../../support/utils/utils";
 class HomePage {
     locators={
         featureItems: '.features_items .productinfo',
-        // path: 'a[href="/products"]',
         womenPath: 'a[href="#Women"]',
         womenDressPath: 'a[href="/women/dress"]',
         womenTops: 'a[href="/category_products/2"]',
         addToCart: '.add-to-cart',
         continueShop: '.modal-footer > .btn',
-
+        featureItemH2: '.features_items > h2',
+        addsBox: '#ad_position_box',
+        addsDismissBtn: '#dismiss-button',
     }
 
     getFeaturedItems() {

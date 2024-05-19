@@ -8,6 +8,7 @@ class LoginPage {
         submitBtn: 'button[data-qa="login-button"]',
     };
 
+
     visit() {
       cy.visit('https://www.automationexercise.com/');
     }
@@ -32,26 +33,6 @@ class LoginPage {
         cy.get(this.locators.logOut).should('contain', 'Logout');
       }
 }
-
-// class LoginPage {
-//     enterURL() {
-//      cy.visit(
-//        "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
-//      );
-//    }
-//     enterUserNamePassword(username, password) {
-//      cy.get('[id="input-email"]').type(username);
-//      cy.get('[id="input-password"]').type(password);
-//      return this;
-//    }
-//     clickSubmitButton() {
-//      cy.get('[type="submit"]').eq(0).click();
-//      return this;
-//    }
-//     verifyPageTitle() {
-//      return cy.title().should("eq", "Search -");
-//    }
-//  }
 
 const loginPage = new LoginPage();
 export default loginPage;
