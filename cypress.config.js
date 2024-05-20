@@ -3,9 +3,11 @@ const cucumber = require("cypress-cucumber-preprocessor").default;
 
 module.exports = defineConfig({
   e2e: {
+    reporter: 'cypress-mochawesome-reporter',
     specPattern: "cypress/e2e/tests/*.feature",
     setupNodeEvents(on, config) {
       on("file:preprocessor", cucumber());
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
     baseUrl: 'https://www.automationexercise.com/',
 

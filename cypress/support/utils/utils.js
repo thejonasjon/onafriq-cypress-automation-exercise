@@ -1,6 +1,6 @@
 // cypress/support/utils/utils.js
 
-// Utility function to remove add pop-ups
+// Utility function to remove adds pop-ups
 Cypress.Commands.add('removePopUp', (elSelector) => {
     cy.get('body').then(($body) => {
       if ($body.find(elSelector).length > 0) {
